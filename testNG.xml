@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.RestAPIBasicTest">
       	<methods>
-      		<include name= "testPrintHeaders"/>
+      		 <include name= "testPrintHeaders"/>
   		</methods>
   	 </class>
     </classes>
