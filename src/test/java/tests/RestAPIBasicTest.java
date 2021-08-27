@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -41,7 +42,7 @@ public class RestAPIBasicTest {
 	void testStatusLineOfResponse()
 	{
 		objRestAPIBasicPage.getResponseFromServer(sCity);
-		System.out.println(objRestAPIBasicPage.getStatusLineFromServer());
+		Reporter.log(objRestAPIBasicPage.getStatusLineFromServer());
 		Assert.assertEquals(objRestAPIBasicPage.getStatusLineFromServer(), STATUSLINE);
 	}
 
@@ -50,9 +51,9 @@ public class RestAPIBasicTest {
 	{
 		objRestAPIBasicPage.getResponseFromServer(sCity);
 		objRestAPIBasicPage.printAllHeaders();
-		System.out.println(objRestAPIBasicPage.printHeaderValue("Content-Type"));
-		System.out.println(objRestAPIBasicPage.printHeaderValue("Content-Length"));
-		System.out.println(objRestAPIBasicPage.printHeaderValue("Connection"));
-		System.out.println(objRestAPIBasicPage.printHeaderValue("Server"));
+		Reporter.log(objRestAPIBasicPage.printHeaderValue("Content-Type"));
+		Reporter.log(objRestAPIBasicPage.printHeaderValue("Content-Length"));
+		Reporter.log(objRestAPIBasicPage.printHeaderValue("Connection"));
+		Reporter.log(objRestAPIBasicPage.printHeaderValue("Server"));
 	}
 }

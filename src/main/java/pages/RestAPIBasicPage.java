@@ -1,5 +1,7 @@
 package pages;
 
+import org.testng.Reporter;
+
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
@@ -44,7 +46,7 @@ public class RestAPIBasicPage {
 		
 		for(Header href : objHeaders)
 		{
-			System.out.println("Name : "+href.getName()+" Value : "+href.getValue());
+			Reporter.log("Name : "+href.getName()+" Value : "+href.getValue());
 		}
 
 	}
